@@ -1,23 +1,31 @@
 <template>
-  <div class="block">
-    click me
-  </div>
+  <div class="block" v-if="showBlock">click me</div>
 </template>
 
 <script>
 export default {
-    props: ['delay']
-}
+  props: ["delay"],
+  data() {
+    return {
+      showBlock: false,
+    };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.showBlock = true;
+    }, this.delay);
+  },
+};
 </script>
 
-<style> 
-    .block {
-        width: 400px;
-        border-radius: 20px;
-        background: #0faf87;
-        color: #fff;
-        text-align: center;
-        padding: 100px 0;
-        margin: 40px auto;
-    }
+<style>
+.block {
+  width: 400px;
+  border-radius: 20px;
+  background: #0faf87;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+  margin: 40px auto;
+}
 </style>
