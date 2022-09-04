@@ -1,6 +1,32 @@
-# reaction-timer
+# Reaction Timer
+
+
+
+## Table of contents
+
+- [Screenshot](#screenshot)
+- [Author](#author)
+
+
+
+## Screenshot
+
+- ![](img/animation.gif)
+
+
+
+Here you see the desktop web view of the project.
+
+
+
+## Author
+
+- LinkedIn - [Serdar ÖNCÜLER](https://www.linkedin.com/in/serdaronculer/)
+
+
 
 ## Project setup
+
 ```
 npm install
 ```
