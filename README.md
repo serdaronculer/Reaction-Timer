@@ -5,6 +5,7 @@
 ## Table of contents
 
 - [Screenshot](#screenshot)
+- [Link](#link)
 - [Author](#author)
 
 
@@ -18,7 +19,9 @@
 Here you see the desktop web view of the project.
 Gif file may show distorted pixels
 
+## Link
 
+Live Site URL: [Live Site](https://serdaronculer.github.io/Reaction-Timer/dist/)
 
 ## Author
 
@@ -36,11 +39,3 @@ npm install
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
