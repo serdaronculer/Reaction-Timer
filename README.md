@@ -11,7 +11,7 @@
 
 ## Screenshot
 
-- ![](img/animation.gif)
+- ![](img/Animation.gif)
 
 
 
