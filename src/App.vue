@@ -1,27 +1,28 @@
 <template>
   <div :class="{transition : isPlaying}" :style="{ background }" class="container">
     <h1 :class="{transition : isPlaying}" :style="{ color }">Reaction Timer</h1>
-    <a href="#" :class="{transition : isPlaying}" @click="start" :style="{ cursor, background, color, 'border-color': color }">play</a>
+    <a :closed="isPlaying" href="#" :class="{transition : isPlaying}" @click="start" :style="{background, color, 'border-color': color }">play</a>
     <Block v-if="isPlaying" :delay="delay" @end="endGame"></Block>
-    <p class="reactionTime" v-show="showResults">Reaction time : {{ score }} ms</p>
+    <Results v-if="showResults" :score="score" />
   </div>
 </template>
 
 <script>
 import Block from "./components/Block.vue";
+import Results from "./components/Results.vue";
 export default {
   name: "App",
   components: {
     Block,
-  },
+    Results
+},
   data() {
     return {
       isPlaying: false,
       delay: null,
       score: null,
       showResults: false,
-      background: "white",
-      cursor: "pointer",
+      background: "#fff",
       color: "#000",
     };
   },
@@ -31,7 +32,6 @@ export default {
       this.isPlaying = true;
       this.showResults = false;
       this.background = "red";
-      this.cursor = "not-allowed";
       this.color = "#fff";
     },
     endGame(reactionTime) {
@@ -40,7 +40,6 @@ export default {
       this.showResults = true;
       this.background = "green";
       this.color = "#fff";
-      this.cursor = "pointer";
     },
   },
 };
@@ -73,14 +72,11 @@ export default {
   border: 1px solid;
   border-color: #000;
   margin-top: 10px;
+  cursor: pointer;
 }
 
-.reactionTime{
-  font-size: 1.4rem;
-  color: #fff;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.container a[closed="true"] {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 </style>
