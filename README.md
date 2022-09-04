@@ -16,6 +16,7 @@
 
 
 Here you see the desktop web view of the project.
+Gif file may show distorted pixels
 
 
 
